@@ -106,9 +106,9 @@ def run():
     print('\n')
 
    # old_people = list(map(lambda worker: worker | {"old": worker["age"] > 70}, DATA))
-    old_people = {worker | {'old': worker['age'] > 70} for worker in DATA}
+    old_people = [worker | {'old': worker['age'] > 70} for worker in DATA]
     
-    for worker in all_python_developers:
+    for worker in old_people:
          print(worker)
 
 
