@@ -74,7 +74,7 @@ DATA = [
 def run():
 
     # Comprehensions solutions
-    # all_python_devs = [worker["name"] for worker in DATA if worker["language"] == "python"]
+    # all_python_developers = [worker["name"] for worker in DATA if worker["language"] == "python"]
     # all_Platzi_workers = [worker["name"] for worker in DATA if worker["organization"] == "Platzi"]
 
     #  high order functions
@@ -106,11 +106,13 @@ def run():
     print('\n')
 
     #old_people = list(map(lambda worker: worker | {"old": worker["age"] > 70}, DATA))
-    old_people = list(map(lambda worker: {**worker, **{'old': worker['age'] > 70}}, DATA))
-    #old_people = [worker | {'old': worker['age'] > 70} for worker in DATA]
+    #old_people = list(map(lambda worker: {**worker, **{'old': worker['age'] > 70}}, DATA))
+    old_people = [{**worker, **{'old': worker['age'] > 70}, } for worker in DATA]
     
+    # for worker in old_people:
+    #      print(worker)
     for worker in old_people:
-         print(worker)
+        print(worker)
 
 
 
