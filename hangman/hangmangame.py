@@ -11,7 +11,7 @@ def game(words):
     
     print(word_selection)
     print(letters)
-    #input('Enter a letter: ')
+    
 
 
 def read():
