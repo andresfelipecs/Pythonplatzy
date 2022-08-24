@@ -1,22 +1,35 @@
 
+from hashlib import new
 import random
 
 def game(words):
     word_selection = random.choice(words)
+    word_selection = "mongo"
+    # create a lit comp for letter in word
     letters = [letter for letter in word_selection if letter != '\n']
+
+
+    # ask the user to input a letter they want to guess from word
     single_letter = input(str('Please enter the letter to check: '))
-    list = ['_' for i in enumerate(letters)]
-    #print(list)
+    new_list = letters[:]
     
-    if single_letter in letters:
-        list2 = [single_letter]
-        new_list = [element for element in letters if element in list2]
-        print(list)
-    else:
-        print(list)
+
+    # replace letters with '_'
+    new_list = ['_' for i, _ in enumerate(new_list)]
+    # for i, _ in enumerate(new_list):
+    #     new_list[i] = "_"
+        
+    
+    #compare single letter with all letters to match
+    #new_list[i] = [ i for i, _ in enumerate(letters) if single_letter == i]
+    for index_val, elem in enumerate(letters):
+        if single_letter == elem:
+            new_list[index_val] = elem
+
 
     print(word_selection)
     print(letters)
+    print(new_list)
     
 
 
