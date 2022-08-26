@@ -12,20 +12,26 @@ def game(words):
     list = letters[:]
     for i, n in enumerate(list):
         list[i] = "_"
+    print(f' \n {list}')
     
-    for i in range(3):        
+    for i in range(7):        
     # replace letters with '_'
     
-            single_letter = input(str('Please enter the letter to check: '))
+            single_letter = input(str('\n Please enter the letter to check: \n\n '))
         
     #compare single letter with all letters to match
             for index_val, elem in enumerate(letters):
                 if single_letter == elem:
                     list[index_val] = elem
-                    
+            if single_letter not in letters:
+                print('\n UPSSSS try again  \n')   
+            print(f' \n {list}')
+    if list != letters:
+        print(f'You lost ! The word is: {word_selection}')
+    else:
+        print(f'You a winner ! The word is {word_selection}')      
                     
             #single_letter = input(str('Please enter the letter to check: '))
-            print(list)
 
 
     # print(word_selection)
