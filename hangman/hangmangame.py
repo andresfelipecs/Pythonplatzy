@@ -49,15 +49,21 @@ def game(words, new_width=100):
 
     print(f' \n {list}')
     
+    
+                
     for i in range(7):      
 
     # ask the user to input a letter they want to guess from word
         single_letter = input(str('\n Please enter the letter to check: \n\n '))
         time_try -= 1 
 
+        
+
+
 
     #compare single letter with all letters to match
         for index_val, elem in enumerate(letters):
+
             if single_letter == elem:
                 os.system('clear')
 
@@ -66,6 +72,11 @@ def game(words, new_width=100):
 
                 print(f'You have {time_try} tries left')
                 list[index_val] = elem
+                
+                # working on this
+                # list_entry = [i+i for i in single_letter ]
+                # print(list_entry)
+                
                 if list != letters:
                     print(''' 
                      ___________.._______
@@ -126,6 +137,7 @@ def game(words, new_width=100):
             print(fuente.renderText('\n HANGMAN  GAME'))
 
             print(f'You have {time_try} tries left, Try again... ')
+
             
             if time_try == 7:
                 print(''' 
