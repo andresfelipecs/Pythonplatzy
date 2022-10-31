@@ -1,13 +1,13 @@
 from pyfiglet import Figlet
 import random
-import os 
+import os
 
 
 def game(words, new_width=100):
     
     # word selection
-    word_selection = random.choice(words)
-    #word_selection = "holaamigo"
+    #word_selection = random.choice(words)
+    word_selection = "python"
     # create a lit comp for letter in word
     letters = [letter for letter in word_selection if letter != '\n']
     time_try = 7
