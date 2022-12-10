@@ -1,13 +1,12 @@
 class Solution:
-    def twoSum(self, nums: list[int], target: int) -> list[int]:
-            for i in range(len(nums)):
-                for j in range(i+1,len(nums)):
-                    if target == nums[i]+nums[j]:
-                        return [i,j]
+    def twoSum(self, list_nums, target):
+        pass
+        
                     
                     
-num = [1,2,3,4,5,6,7,8,9,10]
-target = 8
+if __name__ == '__main__':
 
-s = Solution()
-print(s.twoSum(num,target))
+    nums = [2,7,11,15]
+    target = 9
+    s = Solution()
+    print(s.twoSum(nums,target))
