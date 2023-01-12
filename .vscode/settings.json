@@ -1,9 +1,17 @@
 {
     "cSpell.words": [
+        "bsczc",
         "condicion",
         "iloc",
         "negamos",
         "nombre",
-        "pyfiglet"
-    ]
+        "pyfiglet",
+        "quandl",
+        "rangebreaks",
+        "rangeselector",
+        "rangeslider",
+        "timeframes",
+        "xaxes"
+    ],
+    "notebook.output.textLineLimit": 300
 }
